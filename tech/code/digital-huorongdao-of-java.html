@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-beta.46" />
+    <meta name="theme" content="VuePress Theme Hope" />
+    <title>曹操哪里跑！--Java语言实现数字华容道游戏 | 你好，戴先生</title><meta name="description" content="无论何时归来，我都是少年">
+    <style>
+      :root {
+        --bg-color: #fff;
+      }
+
+      html[data-theme="dark"] {
+        --bg-color: #1d2025;
+      }
+
+      html,
+      body {
+        background-color: var(--bg-color);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.querySelector("html").setAttribute("data-theme", "dark");
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/style.4bad6894.css">
+    <link rel="modulepreload" href="/assets/app.6abff923.js"><link rel="modulepreload" href="/assets/digital-huorongdao-of-java.html.42a1f72c.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper.21dcd24c.js"><link rel="modulepreload" href="/assets/digital-huorongdao-of-java.html.43857b67.js"><link rel="prefetch" href="/assets/index.html.62a4ce73.js"><link rel="prefetch" href="/assets/index.html.f1523c68.js"><link rel="prefetch" href="/assets/index.html.b2ad61dc.js"><link rel="prefetch" href="/assets/index.html.47e2ecb8.js"><link rel="prefetch" href="/assets/index.html.6d9d68c0.js"><link rel="prefetch" href="/assets/why-hr-increase-income-through-tax-avoidance.html.55d1e6aa.js"><link rel="prefetch" href="/assets/sanding_in_front_of_the_30-year-old_door.html.3b1e82a4.js"><link rel="prefetch" href="/assets/blind-hero.html.8a90b1c2.js"><link rel="prefetch" href="/assets/shylock-on-the-plain.html.4e5ecda6.js"><link rel="prefetch" href="/assets/celadon.html.c126c78a.js"><link rel="prefetch" href="/assets/cut_wood.html.9fd1cd06.js"><link rel="prefetch" href="/assets/find-minimum-in-rotated-sorted-array.html.5b9185b6.js"><link rel="prefetch" href="/assets/longest-string-of-no-repeat.html.d59b35a9.js"><link rel="prefetch" href="/assets/search-in-rotated-sorted-array.html.46c9b561.js"><link rel="prefetch" href="/assets/send_a_site_to_yourself.html.38ad2707.js"><link rel="prefetch" href="/assets/404.html.a8e3cb07.js"><link rel="prefetch" href="/assets/index.html.e845cdce.js"><link rel="prefetch" href="/assets/index.html.ff7ccc29.js"><link rel="prefetch" href="/assets/index.html.d4953529.js"><link rel="prefetch" href="/assets/index.html.fb619bb8.js"><link rel="prefetch" href="/assets/index.html.55b4865a.js"><link rel="prefetch" href="/assets/index.html.05f66ce3.js"><link rel="prefetch" href="/assets/index.html.436433ee.js"><link rel="prefetch" href="/assets/index.html.50862118.js"><link rel="prefetch" href="/assets/index.html.b0bc4906.js"><link rel="prefetch" href="/assets/index.html.71820a22.js"><link rel="prefetch" href="/assets/index.html.92ca49fa.js"><link rel="prefetch" href="/assets/index.html.089989f4.js"><link rel="prefetch" href="/assets/index.html.b66adeb3.js"><link rel="prefetch" href="/assets/index.html.309e9ed5.js"><link rel="prefetch" href="/assets/index.html.2162ce1d.js"><link rel="prefetch" href="/assets/index.html.31f2f2dc.js"><link rel="prefetch" href="/assets/index.html.af54eccb.js"><link rel="prefetch" href="/assets/index.html.d2c407a3.js"><link rel="prefetch" href="/assets/index.html.0103470a.js"><link rel="prefetch" href="/assets/index.html.ffcb8a8f.js"><link rel="prefetch" href="/assets/index.html.8e8b1a11.js"><link rel="prefetch" href="/assets/index.html.f02d6c57.js"><link rel="prefetch" href="/assets/index.html.31c86522.js"><link rel="prefetch" href="/assets/index.html.fc761136.js"><link rel="prefetch" href="/assets/why-hr-increase-income-through-tax-avoidance.html.5cd59ab3.js"><link rel="prefetch" href="/assets/sanding_in_front_of_the_30-year-old_door.html.7dd44209.js"><link rel="prefetch" href="/assets/blind-hero.html.12d2e556.js"><link rel="prefetch" href="/assets/shylock-on-the-plain.html.e5502463.js"><link rel="prefetch" href="/assets/celadon.html.a7560ba8.js"><link rel="prefetch" href="/assets/cut_wood.html.ddd81f64.js"><link rel="prefetch" href="/assets/find-minimum-in-rotated-sorted-array.html.8e635a4a.js"><link rel="prefetch" href="/assets/longest-string-of-no-repeat.html.1a6977dd.js"><link rel="prefetch" href="/assets/search-in-rotated-sorted-array.html.69087f7c.js"><link rel="prefetch" href="/assets/send_a_site_to_yourself.html.1b02ac3b.js"><link rel="prefetch" href="/assets/404.html.961775c8.js"><link rel="prefetch" href="/assets/index.html.fed016c6.js"><link rel="prefetch" href="/assets/index.html.9f33a7d1.js"><link rel="prefetch" href="/assets/index.html.8df15ffb.js"><link rel="prefetch" href="/assets/index.html.7e3e3e7a.js"><link rel="prefetch" href="/assets/index.html.85ac9757.js"><link rel="prefetch" href="/assets/index.html.f4c07f72.js"><link rel="prefetch" href="/assets/index.html.3eae3b73.js"><link rel="prefetch" href="/assets/index.html.6b13dcab.js"><link rel="prefetch" href="/assets/index.html.2046de0f.js"><link rel="prefetch" href="/assets/index.html.1fa19136.js"><link rel="prefetch" href="/assets/index.html.21c26da0.js"><link rel="prefetch" href="/assets/index.html.9675df24.js"><link rel="prefetch" href="/assets/index.html.e874df9d.js"><link rel="prefetch" href="/assets/index.html.cb3f3ee4.js"><link rel="prefetch" href="/assets/index.html.a7d6c754.js"><link rel="prefetch" href="/assets/index.html.efc63f07.js"><link rel="prefetch" href="/assets/index.html.cd4b6ac0.js"><link rel="prefetch" href="/assets/index.html.c66136d3.js"><link rel="prefetch" href="/assets/index.html.33a3cf27.js"><link rel="prefetch" href="/assets/404.c28cf793.js"><link rel="prefetch" href="/assets/Layout.a2707d0d.js"><link rel="prefetch" href="/assets/Slide.61bb06c2.js"><link rel="prefetch" href="/assets/Blog.75685d43.js"><link rel="prefetch" href="/assets/auto.esm.36809f22.js"><link rel="prefetch" href="/assets/index.5cb56ef7.js"><link rel="prefetch" href="/assets/index.1842ee54.js"><link rel="prefetch" href="/assets/mermaid.esm.min.95aabeb7.js"><link rel="prefetch" href="/assets/highlight.esm.d982e650.js"><link rel="prefetch" href="/assets/markdown.esm.832a189d.js"><link rel="prefetch" href="/assets/math.esm.a3f84b6f.js"><link rel="prefetch" href="/assets/notes.esm.3c361cb7.js"><link rel="prefetch" href="/assets/reveal.esm.b96f05d8.js"><link rel="prefetch" href="/assets/search.esm.80da4a02.js"><link rel="prefetch" href="/assets/zoom.esm.8514a202.js"><link rel="prefetch" href="/assets/photoswipe.esm.92018b73.js">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="skip-link sr-only">Skip to content</a><!--]--><div class="theme-container has-toc"><!--[--><!--[--><header class="navbar"><div class="navbar-left"><button class="toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!----><a href="/" class="brand"><img class="logo" src="/images/logo.svg" alt="你好，戴先生"><!----><span class="site-name hide-in-pad">你好，戴先生</span></a><!----></div><div class="navbar-center"><!----><nav class="nav-links"><div class="nav-item hide-in-mobile"><a href="/essay/" class="nav-link" aria-label="戴言泛滥"><span class="icon iconfont icon-edit" style=""></span>戴言泛滥<!----></a></div><div class="nav-item hide-in-mobile"><a href="/tech/" class="nav-link active" aria-label="技术人生"><span class="icon iconfont icon-java" style=""></span>技术人生<!----></a></div><div class="nav-item hide-in-mobile"><a href="/movie/" class="nav-link" aria-label="影视推荐"><span class="icon iconfont icon-actions" style=""></span>影视推荐<!----></a></div><div class="nav-item hide-in-mobile"><a href="/me/" class="nav-link" aria-label="关于作者"><span class="icon iconfont icon-people" style=""></span>关于作者<!----></a></div></nav><!----></div><div class="navbar-right"><!----><div class="nav-item"><!----></div><!----><div class="nav-item hide-in-mobile"><button id="appearance-switch"><svg xmlns="http://www.w3.org/2000/svg" class="icon auto-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="auto icon" style="display:block;"><path d="M512 992C246.92 992 32 777.08 32 512S246.92 32 512 32s480 214.92 480 480-214.92 480-480 480zm0-840c-198.78 0-360 161.22-360 360 0 198.84 161.22 360 360 360s360-161.16 360-360c0-198.78-161.22-360-360-360zm0 660V212c165.72 0 300 134.34 300 300 0 165.72-134.28 300-300 300z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon dark-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="dark icon" style="display:none;"><path d="M524.8 938.667h-4.267a439.893 439.893 0 0 1-313.173-134.4 446.293 446.293 0 0 1-11.093-597.334A432.213 432.213 0 0 1 366.933 90.027a42.667 42.667 0 0 1 45.227 9.386 42.667 42.667 0 0 1 10.24 42.667 358.4 358.4 0 0 0 82.773 375.893 361.387 361.387 0 0 0 376.747 82.774 42.667 42.667 0 0 1 54.187 55.04 433.493 433.493 0 0 1-99.84 154.88 438.613 438.613 0 0 1-311.467 128z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon light-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="light icon" style="display:none;"><path d="M952 552h-80a40 40 0 0 1 0-80h80a40 40 0 0 1 0 80zM801.88 280.08a41 41 0 0 1-57.96-57.96l57.96-58a41.04 41.04 0 0 1 58 58l-58 57.96zM512 752a240 240 0 1 1 0-480 240 240 0 0 1 0 480zm0-560a40 40 0 0 1-40-40V72a40 40 0 0 1 80 0v80a40 40 0 0 1-40 40zm-289.88 88.08-58-57.96a41.04 41.04 0 0 1 58-58l57.96 58a41 41 0 0 1-57.96 57.96zM192 512a40 40 0 0 1-40 40H72a40 40 0 0 1 0-80h80a40 40 0 0 1 40 40zm30.12 231.92a41 41 0 0 1 57.96 57.96l-57.96 58a41.04 41.04 0 0 1-58-58l58-57.96zM512 832a40 40 0 0 1 40 40v80a40 40 0 0 1-80 0v-80a40 40 0 0 1 40-40zm289.88-88.08 58 57.96a41.04 41.04 0 0 1-58 58l-57.96-58a41 41 0 0 1 57.96-57.96z"></path></svg></button></div><form class="search-box" role="search"><input type="search" placeholder="搜索内容" autocomplete="off" spellcheck="false" value><!----></form><!----><button class="toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span class="button-container"><span class="button-top"></span><span class="button-middle"></span><span class="button-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow left"></span></div><aside class="sidebar"><!--[--><!----><!--]--><ul class="sidebar-links"><li><!--[--><section class="sidebar-group"><p class="sidebar-heading"><span class="icon iconfont icon-add" style=""></span><span class="title">做做算法</span><!----></p><ul class="sidebar-links"><li><!--[--><a href="/tech/algorithm/search-in-rotated-sorted-array.html" class="nav-link sidebar-link sidebar-page" aria-label="必会算法：在旋转有序的数组中搜索"><!---->必会算法：在旋转有序的数组中搜索<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a href="/tech/algorithm/find-minimum-in-rotated-sorted-array.html" class="nav-link sidebar-link sidebar-page" aria-label="必会算法：在旋转有序的数组中找最小"><!---->必会算法：在旋转有序的数组中找最小<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a href="/tech/algorithm/cut_wood.html" class="nav-link sidebar-link sidebar-page" aria-label="算法题：切木头"><!---->算法题：切木头<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a href="/tech/algorithm/longest-string-of-no-repeat.html" class="nav-link sidebar-link sidebar-page" aria-label="无重复字符的最长子串"><!---->无重复字符的最长子串<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li></ul></section><!--]--></li><li><!--[--><section class="sidebar-group"><p class="sidebar-heading"><span class="icon iconfont icon-config" style=""></span><span class="title">搭搭环境</span><!----></p><ul class="sidebar-links"><li><!--[--><a href="/tech/environment/send_a_site_to_yourself.html" class="nav-link sidebar-link sidebar-page" aria-label="有兴趣送自己一个免费且高大上的个人网站吗"><!---->有兴趣送自己一个免费且高大上的个人网站吗<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li></ul></section><!--]--></li><li><!--[--><section class="sidebar-group"><p class="sidebar-heading active"><span class="icon iconfont icon-code" style=""></span><span class="title">敲敲代码</span><!----></p><ul class="sidebar-links"><li><!--[--><a aria-current="page" href="/tech/code/digital-huorongdao-of-java.html" class="router-link-active router-link-exact-active nav-link active sidebar-link sidebar-page active" aria-label="曹操哪里跑！--Java语言实现数字华容道游戏"><!---->曹操哪里跑！--Java语言实现数字华容道游戏<!----></a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a aria-current="page" href="/tech/code/digital-huorongdao-of-java.html#基本思路" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="基本思路"><!---->基本思路<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/tech/code/digital-huorongdao-of-java.html#代码实现" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="代码实现"><!---->代码实现<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/tech/code/digital-huorongdao-of-java.html#效果图" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="效果图"><!---->效果图<!----></a><ul class="sidebar-sub-headers"></ul></li></ul><!--]--></li></ul></section><!--]--></li></ul><!--[--><!----><!--]--></aside><!--[--><main class="page" id="main-content"><!--[--><!----><nav class="breadcrumb disable"></nav><div class="page-title"><h1><!---->曹操哪里跑！--Java语言实现数字华容道游戏</h1><div class="page-info"><span class="author-info" aria-label="作者🖊" data-balloon-pos="down" isoriginal="false" pageview="false"><svg xmlns="http://www.w3.org/2000/svg" class="icon author-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="author icon"><path d="M649.6 633.6c86.4-48 147.2-144 147.2-249.6 0-160-128-288-288-288s-288 128-288 288c0 108.8 57.6 201.6 147.2 249.6-121.6 48-214.4 153.6-240 288-3.2 9.6 0 19.2 6.4 25.6 3.2 9.6 12.8 12.8 22.4 12.8h704c9.6 0 19.2-3.2 25.6-12.8 6.4-6.4 9.6-16 6.4-25.6-25.6-134.4-121.6-240-243.2-288z"></path></svg><span><a class="author-item" href="http://www.daijiyong.cn" target="_blank" rel="noopener noreferrer">Mr.Dai</a></span><span property="author" content="Mr.Dai"></span></span><!----><span class="date-info" aria-label="写作日期📅" data-balloon-pos="down" isoriginal="false" pageview="false"><svg xmlns="http://www.w3.org/2000/svg" class="icon calendar-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="calendar icon"><path d="M716.4 110.137c0-18.753-14.72-33.473-33.472-33.473-18.753 0-33.473 14.72-33.473 33.473v33.473h66.993v-33.473zm-334.87 0c0-18.753-14.72-33.473-33.473-33.473s-33.52 14.72-33.52 33.473v33.473h66.993v-33.473zm468.81 33.52H716.4v100.465c0 18.753-14.72 33.473-33.472 33.473a33.145 33.145 0 01-33.473-33.473V143.657H381.53v100.465c0 18.753-14.72 33.473-33.473 33.473a33.145 33.145 0 01-33.473-33.473V143.657H180.6A134.314 134.314 0 0046.66 277.595v535.756A134.314 134.314 0 00180.6 947.289h669.74a134.36 134.36 0 00133.94-133.938V277.595a134.314 134.314 0 00-133.94-133.938zm33.473 267.877H147.126a33.145 33.145 0 01-33.473-33.473c0-18.752 14.72-33.473 33.473-33.473h736.687c18.752 0 33.472 14.72 33.472 33.473a33.145 33.145 0 01-33.472 33.473z"></path></svg><span>2020年6月7日</span><meta property="datePublished" content="2020-06-07T00:00:00.000Z"></span><span class="category-info" aria-label="分类🌈" data-balloon-pos="down" isoriginal="false" pageview="false"><svg xmlns="http://www.w3.org/2000/svg" class="icon category-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="category icon"><path d="M148.41 106.992h282.176c22.263 0 40.31 18.048 40.31 40.31V429.48c0 22.263-18.047 40.31-40.31 40.31H148.41c-22.263 0-40.311-18.047-40.311-40.31V147.302c0-22.263 18.048-40.31 40.311-40.31zM147.556 553.478H429.73c22.263 0 40.311 18.048 40.311 40.31v282.176c0 22.263-18.048 40.312-40.31 40.312H147.555c-22.263 0-40.311-18.049-40.311-40.312V593.79c0-22.263 18.048-40.311 40.31-40.311zM593.927 106.992h282.176c22.263 0 40.31 18.048 40.31 40.31V429.48c0 22.263-18.047 40.31-40.31 40.31H593.927c-22.263 0-40.311-18.047-40.311-40.31V147.302c0-22.263 18.048-40.31 40.31-40.31zM730.22 920.502H623.926c-40.925 0-74.22-33.388-74.22-74.425V623.992c0-41.038 33.387-74.424 74.425-74.424h222.085c41.038 0 74.424 33.226 74.424 74.067v114.233c0 10.244-8.304 18.548-18.547 18.548s-18.548-8.304-18.548-18.548V623.635c0-20.388-16.746-36.974-37.33-36.974H624.13c-20.585 0-37.331 16.747-37.331 37.33v222.086c0 20.585 16.654 37.331 37.126 37.331H730.22c10.243 0 18.547 8.304 18.547 18.547 0 10.244-8.304 18.547-18.547 18.547z"></path></svg><ul class="categories-wrapper"><li class="category category6 clickable" role="navigation">敲敲代码</li><meta property="articleSection" content="敲敲代码"></ul></span><!----><span class="reading-time-info" aria-label="阅读时间⌛" data-balloon-pos="down" isoriginal="false" pageview="false"><svg xmlns="http://www.w3.org/2000/svg" class="icon timer-icon" viewbox="0 0 1024 1024" fill="currentColor" aria-label="timer icon"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z"></path></svg><span>大约 4 分钟</span><meta property="timeRequired" content="PT4M"></span></div><hr></div><div class="toc-place-holder"><aside id="toc"><div class="toc-header">此页内容</div><div class="toc-wrapper"><ul class="toc-list"><!--[--><li class="toc-item"><a aria-current="page" href="/tech/code/digital-huorongdao-of-java.html#基本思路" class="router-link-active router-link-exact-active toc-link level2">基本思路</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/tech/code/digital-huorongdao-of-java.html#代码实现" class="router-link-active router-link-exact-active toc-link level2">代码实现</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/tech/code/digital-huorongdao-of-java.html#效果图" class="router-link-active router-link-exact-active toc-link level2">效果图</a></li><!----><!--]--></ul></div></aside></div><!----><div class="theme-hope-content"><p>最近这段时间《最强大脑》又开播了</p><p>但是怎么却少了经典的数字华容道游戏</p><p>心血来潮，想着手写一个解数字华容道游戏的程序</p><p>但是想解题得先有个题，就先实现了一个数字华容道</p><h2 id="基本思路" tabindex="-1"><a class="header-anchor" href="#基本思路" aria-hidden="true">#</a> 基本思路</h2><p>使用一维数组表示数字华容道的游戏内容 根据用户的输入值m</p><p>随机生成一个大小为m*m大小的一维数组 一维数组内容的大小为0到m-1</p><p>其中0代表空格 考虑到随机生成的数组内容可能存在无解的情况</p><p>我是先生成了一个有序的数组</p><p>0在最后一位 然后随机移动300次</p><p>并保证生成的一维数组不是有序的</p><p>用户通过输入某个数字x</p><p>移动x和0之间的数字 并将0数字放到x的位置 每次移动数字后</p><p>都检查一遍是否已经完成 直到完成数字华容道 话不多说上代码</p><h2 id="代码实现" tabindex="-1"><a class="header-anchor" href="#代码实现" aria-hidden="true">#</a> 代码实现</h2><p>你看，良好的代码注释</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>/**
+ * 数字华容道
+ *
+ * @author daijiyong
+ */
+public class Klotski {
+    /**
+     * 数字华容道的大小
+     */
+    private Integer size;
+    /**
+     * 使用一维数组表示数字华容道
+     */
+    private int[] klotski;
+    /**
+     * key:数字
+     * value：数字对应的索引
+     */
+    Map&lt;Integer, Integer&gt; numberIndex = new HashMap&lt;&gt;();
+    /**
+     * key:数字
+     * value：数字对应坐标位置
+     */
+    Map&lt;Integer, int[]&gt; numberCoordinate = new HashMap&lt;&gt;();
+
+
+    public Klotski() {
+    }
+
+    public Klotski(Integer size) {
+        this.size = size;
+        init();
+    }
+
+    /**
+     * 初始化数字华容道
+     * 在排序好的数字华容道的基础上随机移动300次
+     * 保证生成的华容道是有解的
+     */
+    public void init() {
+        int totalSize = (int) Math.pow(size, 2);
+        klotski = new int[totalSize];
+
+        //初始化成员属性
+        for (int i = 1; i &lt; totalSize; i++) {
+            klotski[i - 1] = i;
+            numberIndex.put(i, i - 1);
+            numberCoordinate.put(i, getCoordinate(i));
+        }
+        numberIndex.put(0, totalSize - 1);
+        numberCoordinate.put(0, getCoordinate(0));
+
+        /*
+         * 初始化随机移动300次
+         * 并保证生成的数字华容道不是已排序好的
+         */
+        while (check()) {
+            for (int i = 0; i &lt; 300; i++) {
+                Random random = new Random();
+                move(random.nextInt((int) Math.pow(size, 2)));
+            }
+        }
+
+    }
+
+    /**
+     * 移动某一个数字
+     *
+     * @param number 数字
+     * @return 是否移动成功
+     */
+    public Boolean move(Integer number) {
+        /*
+         *如果要移动的数字是0，即空格，则返回失败
+         */
+        if (number == 0) {
+            return false;
+        }
+        int[] zeroCoordinate = numberCoordinate.get(0);
+        int[] currentCoordinate = numberCoordinate.get(number);
+        /*
+         * 如果输入的数字，不在数字华容道的范围内，则返回失败
+         */
+        if (zeroCoordinate == null || currentCoordinate == null) {
+            return false;
+        }
+
+        if (zeroCoordinate[0] != currentCoordinate[0] &amp;&amp; zeroCoordinate[1] != currentCoordinate[1]) {
+            return false;
+        }
+        /*
+         * 点击的数字并不在0即空格的旁边
+         * 则移动点击数字到空格之间的所有数字
+         * 如果点击数字跟空格不在同一个横轴或纵轴上，则移动失败
+         */
+        if (zeroCoordinate[0] == currentCoordinate[0]) {
+            if (zeroCoordinate[1] &gt; currentCoordinate[1]) {
+                for (int i = zeroCoordinate[1] - 1; i &gt;= currentCoordinate[1]; i--) {
+                    int moveNumber = klotski[coordinate2Index(new int[]{zeroCoordinate[0], i})];
+                    move(0, moveNumber);
+                }
+            }
+            if (zeroCoordinate[1] &lt; currentCoordinate[1]) {
+                for (int i = zeroCoordinate[1] + 1; i &lt;= currentCoordinate[1]; i++) {
+                    int moveNumber = klotski[coordinate2Index(new int[]{zeroCoordinate[0], i})];
+                    move(0, moveNumber);
+                }
+            }
+        }
+
+        if (zeroCoordinate[1] == currentCoordinate[1]) {
+            if (zeroCoordinate[0] &gt; currentCoordinate[0]) {
+                for (int i = zeroCoordinate[0] - 1; i &gt;= currentCoordinate[0]; i--) {
+                    int moveNumber = klotski[coordinate2Index(new int[]{i, zeroCoordinate[1]})];
+                    move(0, moveNumber);
+                }
+            }
+            if (zeroCoordinate[0] &lt; currentCoordinate[0]) {
+                for (int i = zeroCoordinate[0] + 1; i &lt;= currentCoordinate[0]; i++) {
+                    int moveNumber = klotski[coordinate2Index(new int[]{i, zeroCoordinate[1]})];
+                    move(0, moveNumber);
+                }
+            }
+        }
+        return true;
+    }
+
+    /**
+     *  移动交互某两个相邻数字的位置
+     *
+     * @param number1 数字1 在这里就是0
+     * @param number2 数字2 根0相邻的一个数字（上下左右）
+     */
+    private void move(Integer number1, Integer number2) {
+
+        int indexNumber1 = numberIndex.get(number1);
+        int indexNumber2 = numberIndex.get(number2);
+        klotski[indexNumber1] = number2;
+        klotski[indexNumber2] = number1;
+        numberIndex.put(number1, indexNumber2);
+        numberIndex.put(number2, indexNumber1);
+
+        numberCoordinate.put(number1, getCoordinate(number1));
+        numberCoordinate.put(number2, getCoordinate(number2));
+
+
+    }
+
+    /**
+     * 将坐标数据转变为在数组中的索引下标
+     *
+     * @param coordinate 在二维数组中的坐标位置
+     * @return 在一维数组中的索引值
+     */
+    private Integer coordinate2Index(int[] coordinate) {
+        return (coordinate[0] - 1) * size + coordinate[1] - 1;
+    }
+
+    /**
+     * 获取某个数字的坐标，
+     *
+     * @param number 数字
+     * @return 数字所在的位置表座
+     */
+    private int[] getCoordinate(Integer number) {
+        int[] coordinate = new int[2];
+        int index = numberIndex.get(number);
+        coordinate[0] = (index / size) + 1;
+        coordinate[1] = index % size + 1;
+        return coordinate;
+    }
+
+    /**
+     *  检查华容道是否已经完成
+     *
+     * @return 已完成或未完成
+     */
+    public Boolean check() {
+        for (int i = 1; i &lt; klotski.length; i++) {
+            if (i != klotski[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 打印华融的题面
+     * @param str 提示语
+     */
+    public void println(String str) {
+        for (int i = 0; i &lt; klotski.length; i++) {
+            if (i % size == 0) {
+                System.out.println();
+            }
+            System.out.print(klotski[i] + &quot;\t&quot;);
+        }
+        System.out.println();
+        System.out.println(str);
+        System.out.println(&quot;---------------&quot;);
+    }
+
+
+    public void setKlotski(int[] klotski) {
+        this.klotski = klotski;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(&quot;请输入一个大于等于3的数字，用于初始化数字华容道游戏&quot;);
+        Scanner input = new Scanner(System.in);
+        int size = input.nextInt();
+
+        Klotski klotski = new Klotski(size);
+        klotski.println(&quot;请开始你的表演&quot;);
+        while (!klotski.check()) {
+            int num = input.nextInt();
+            klotski.move(num);
+            if (klotski.check()) {
+                klotski.println(&quot;恭喜你已逃出数字华容道&quot;);
+                break;
+            } else {
+                klotski.println(&quot;还没完，请继续你的表演&quot;);
+            }
+        }
+    }
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="效果图" tabindex="-1"><a class="header-anchor" href="#效果图" aria-hidden="true">#</a> 效果图</h2><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82NzE0MjcxLWM3NjgzZGNlYTA5MDI1NGM?x-oss-process=image/format,png" alt="image" loading="lazy"></p><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82NzE0MjcxLWE2ODllM2NjNGUwOGJmYTY?x-oss-process=image/format,png" alt="image" loading="lazy"></p><p>你看，这么轻松就做出来了 你来试试下边这道题吧</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy82NzE0MjcxLTcxNDZlMWVjMWUwYTc5MGI?x-oss-process=image/format,png" alt="image" loading="lazy"></p><div style="text-align:right;"><p>文/戴先生@2020年6月7日</p></div></div><!----><footer class="page-meta"><!----><div class="meta-item update-time"><span class="label">上次编辑于: </span><span class="info">2022/6/4 21:27:52</span></div><div class="meta-item contributors"><span class="label">贡献者: </span><!--[--><!--[--><span class="contributor" title="email: daijiyong.p@qq.com">daijiyong</span><!--]--><!--]--></div></footer><!----><!----><!----><!--]--></main><!--]--><footer class="footer-wrapper"><div class="footer"></div><div class="copyright">Copyright © 2022 Mr.Dai</div></footer><!--]--></div><!--]--><!----><!--]--></div>
+    <script type="module" src="/assets/app.6abff923.js" defer></script>
+  </body>
+</html>
